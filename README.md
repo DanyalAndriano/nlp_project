@@ -10,10 +10,9 @@ Email:  [danyal.andriano@gmail.com](mailto:danyal.andriano@gmail.com)
 
 The objective of this project was to research, design and help deploy natural language processing solutions to:
 1) Automate responses to restaurant reviews online.
-2) Extract information to gain insights into products and topics being spoken about.
-
+2) Extract information to gain insights into products and topics being spoken about. 
 ------------------------------------------------
-Below is a list of notebooks in the directory and the components of the project included in each.
+Below is a list of notebooks in the directory and the components of the project included in each. Use the links to render in html (recommended to view hyperlinks and graphics). 
 
 _NOTE: Data for this notebook is not open source and is not included in this directory._
 
@@ -50,9 +49,11 @@ Text Preprocessing
 Text was preprocessed and saved for later use.
 
 <img src="https://github.com/DanyalAndriano/nlp_reviews_solutions/blob/master/graphics/pandas_preprocessed.png"> 
+
 ----------------------------------------
+
 ## Feature Engineering & Sentiment Analysis
-<br>
+
 > [Unsupervised Sentiment & Text Features Exploration](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/features_benchmarking_eda.html) (Feature Engineering, Resampling Methods/ Class-Imbalance)
 >
 > [N-gram XGBoost Pipeline](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/sentiment-analysis-ML.html) (Tf-Idf, Bag-of-words, Feature Selection, Optimal Error Rate, Sklearn Pipelines, XGBoost, Fine-Tuning)
@@ -61,7 +62,11 @@ Why bother with sentiment analysis when user ratings accompany review text? In g
 
 ![ratings](https://github.com/DanyalAndriano/nlp_reviews_solutions/blob/master/graphics/user_ratings_freq.png) ![ratings predictions](https://github.com/DanyalAndriano/nlp_reviews_solutions/blob/master/graphics/ratings_preds.png)
 
-## End-to-end Deep Learning Sentiment Classification
+The `ratings`, `unsupervised sentiment scores` - from Amazon Comprehend, Textblob and VaderSentiment - as well as `text features` were combined as inputs to various models. Oversampling, undersampling and class-weights were all used to try and better balance the predictions.
+
+<img src=https://github.com/DanyalAndriano/nlp_project/blob/master/resampling_pipeline.png>
+
+## End-to-end Sentiment Classification with Bert
 >[Fast-BERT Sentiment Analysis]() (Fast-Bert Library, Transfer Learning in NLP, Error Analysis, Noisy Labels, Calibration)
 
 ## Deployment & Production
