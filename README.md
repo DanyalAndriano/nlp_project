@@ -127,7 +127,7 @@ Menu Extraction
 
 <img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/Screenshot%20(27).png" width="1000">
 
-# Part 3: Next Steps
+# Part 3: In progress...
 
 > 1) Entity Recognition Models
 > 2) SpaCy Pipelines 
