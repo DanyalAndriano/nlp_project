@@ -38,17 +38,17 @@ Labels
 ----------------
 Sentiment: `negative`, `positive` and `mixed` labels were created from existing negative and positive topic labels. If a review had both negative and positive topics, it was labeled _mixed_. 
 
-<img src="https://github.com/DanyalAndriano/nlp_reviews_solutions/blob/master/graphics/category_labels.png" width="800"> 
+<img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/category_labels.png" width="800"> 
 
 Reviews were predominantly `positive`, with `mixed` and `negative` minority classes.
 
-![Sentiment Labels](https://github.com/DanyalAndriano/nlp_reviews_solutions/blob/master/graphics/sentiment_label_distribution.png) 
+![Sentiment Labels](https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/sentiment_label_distribution.png) 
 
 Text Preprocessing 
 ------------------
 Text was preprocessed and saved for later use.
 
-<img src="https://github.com/DanyalAndriano/nlp_reviews_solutions/blob/master/graphics/pandas_preprocessed.png"> 
+<img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/pandas_preprocessed.png"> 
 
 ----------------------------------------
 
@@ -60,11 +60,26 @@ Text was preprocessed and saved for later use.
 
 Why bother with sentiment analysis when user ratings accompany review text? In general, user ratings were only moderately predictive of the sentiment labels and are therefore unreliable for inference. Furthermore, a 5 star review may still contain mixed sentiment - an automated system would need to be sensitive to this mixed sentiment so that the response, as well as insights into how customers _feel_ about a brand and their _opinions_ of the brand, is appropriate.  
 
-![ratings](https://github.com/DanyalAndriano/nlp_reviews_solutions/blob/master/graphics/user_ratings_freq.png) ![ratings predictions](https://github.com/DanyalAndriano/nlp_reviews_solutions/blob/master/graphics/ratings_preds.png)
+![ratings](https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/user_ratings_freq.png) ![ratings predictions](https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/ratings_preds.png)
 
+Sentiment & Text Features
+-------------------------------
 The `ratings`, `unsupervised sentiment scores` - from Amazon Comprehend, Textblob and VaderSentiment - as well as `text features` were combined as inputs to various models. Oversampling, undersampling and class-weights were all used to try and better balance the predictions.
 
-<img src=https://github.com/DanyalAndriano/nlp_project/blob/master/resampling_pipeline.png>
+<img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/resampling_pipeline.png width="750">
+
+The `Amazon Comprehend sentiment` scores contributed the most predictive value, followed by `Textblob`, and then `VaderSentiment` and `Text Features`.
+<img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/sentiment_feature_importance.png width="750">
+
+NGRAMS
+-----------------
+
+<img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/ngram_cvec.png width="750">
+
+XGBoost Pipeline
+-----------------------
+
+![XGBoost ROC Curve](https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/multiclass_ROC_xgboost.png) ![XGBoost CM](https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/xgboost_cm.png)
 
 ## End-to-end Sentiment Classification with Bert
 >[Fast-BERT Sentiment Analysis]() (Fast-Bert Library, Transfer Learning in NLP, Error Analysis, Noisy Labels, Calibration)
