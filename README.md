@@ -21,7 +21,7 @@ _NOTE: Data for this notebook is not open source and is not included in this dir
 # Part 1: Automation - NLP/ NLU
 
 ## Data Collection, Preparation & Preprocessing
-> [Data Preparation & Preprocessing](http://htmlpreview.github.io/?/https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/features_benchmarking_eda.html) (MySQL, Data Wrangling, Feature Engineering, Text Preprocessing)
+> [Data Preparation & Preprocessing](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/features_benchmarking_eda.html) (MySQL, Data Wrangling, Feature Engineering, Text Preprocessing)
 <br>
 
 The data consisted of 140 related databases in MySQL Workbench (restored from an S3 bucket in AWS). All potentially relevant columns were queried and read into pandas dataframes. 
