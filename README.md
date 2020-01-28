@@ -125,7 +125,7 @@ Menu Extraction
 ## Tableau Dashboard
 > [Menu Items & Sentiment in Reviews](https://public.tableau.com/profile/danyal.andriano#!/vizhome/Menu_Analytics_Dashboard/MenuAnalyticsDashboard?publish=yes) (Data Visualization, Data Mining, Interactive Dashboards, BI)
 
-<img src="https://github.com/DanyalAndriano/nlp_reviews_solutions/blob/master/graphics/Screenshot%20(27).png" width="1000">
+<img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/Screenshot%20(27).png" width="1000">
 
 # Part 3: Next Steps
 
