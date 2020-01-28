@@ -17,8 +17,9 @@ Below is a list of notebooks in the directory and the components of the project 
 _NOTE: Data for this notebook is not open source and is not included in this directory._
 
 # Part 1: Automation - NLP/ NLU
+*______________________________________________________________________________________________________________________________________*
 
-## Data Collection, Preparation & Preprocessing
+# Data Collection, Preparation & Preprocessing
 > [Data Preparation & Preprocessing](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/data_preparation_and_preprocessing.html) (MySQL, Data Wrangling, Feature Engineering, Text Preprocessing)
 <br>
 
@@ -48,7 +49,7 @@ Text was preprocessed and saved for later use.
 
 ----------------------------------------
 
-## Feature Engineering & Sentiment Analysis
+# Feature Engineering & Sentiment Analysis
 
 > [Unsupervised Sentiment & Text Features Exploration](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/features_benchmarking_eda.html) (Feature Engineering, Resampling Methods/ Class-Imbalance)
 >
@@ -70,29 +71,46 @@ The `Amazon Comprehend sentiment` scores contributed the most predictive value, 
 NGRAMS
 -----------------
 
-<img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/ngram_cvec.png width="750">
+<img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/ngram_cvec.png width="650">
 
 XGBoost Pipeline
 -----------------------
 
-<img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/multiclass_ROC_xgboost.png" width="500"> <img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/xgboost_cm.png" width="500">
+<img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/multiclass_ROC_xgboost.png" width="500"> <img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/xgboost_cm.png" width="350">
 
 
-## End-to-end Sentiment Classification with Bert
->[Fast-BERT Sentiment Analysis]() (Fast-Bert Library, Transfer Learning in NLP, Error Analysis, Noisy Labels, Calibration)
+# End-to-end Sentiment Classification with Bert
+>[Fast-BERT Sentiment Analysis](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/bert_sentiment_classification.html) (Fast-Bert Library, Transfer Learning in NLP, Error Analysis, Noisy Labels, Calibration)
+
+<img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/pytorch_transformers.png width="750"> 
+
+Performance
+-------------------------
+
+<img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/bert_cm_uncorrected.png width="400">
+
+Probability Calibration
+-----------------------
+
+<img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/uncalibrated_classwise.png width="350"> <img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/iso_calibration.png width="350">
+
+<img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/calibration_evaluation_metrics.png>
+
 
 ## Deployment & Production
->[Cost-Benefit Analysis]() (Business Value and Risk, Decision Management)
+>[Cost-Benefit Analysis](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/cost_benefit_analysis.html) (Business Value and Risk, Decision Management)
 ><br>
->[Fast-Bert Sentiment Analysis]() (Production, API model deployment, Cloud Services)
+>[Fast-Bert](https://github.com/DanyalAndriano/nlp_project/blob/master/aws/fast-bert-sentiment_aws.ipynb) (Production, API model deployment, Cloud Services)
 ><br>
->[XGBoost Inference Pipeline]() (Custom Preprocessing with Sklean in AWS, Inference Pipelines)
+>[XGBoost Inference Pipeline](https://github.com/DanyalAndriano/nlp_project/blob/master/aws/inference-pipeline-xgboost-sentiment.ipynb) (Custom Preprocessing with Sklean in AWS, Inference Pipelines)
+
+<img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/cost_benefit.png.png">
 
 # Part 2: Insight - Location Based Sentiment Analysis
 ## Data Mining & Visualization
 >[Menu Analytics]() (Case Study, SpaCy NLP Pipelines, Entity Recognition, Data Viz (Time Series, Geospatial)
 ><br>
->[Unsupervised Topic Modeling]() (Text Mining, Text Summarization)
+>[Unsupervised Topic Modeling](Will be added soon) (Text Mining, Text Summarization)
 
 ## Tableau Dashboard
 > [Menu Items & Sentiment in Reviews]() (Data Visualization, Data Mining, Interactive Dashboards, BI)
