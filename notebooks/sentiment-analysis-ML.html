@@ -14070,7 +14070,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p><a id="best"></a></p>
-<h2 id="Best-Results">Best Results<a class="anchor-link" href="#Best-Results">&#182;</a></h2><p>The <code>XGBoost TF-IDF Trigrams</code> appeared to result in the best <code>macro-weighted F1-score</code>. Class-weighted XGBoost also previously resulted in the best balanced predictions using sentiment and text features as input (<a href="features_benchmarking_eda.ipynb">features_benchmarking_eda.ipynb</a>). Therefore, XGBoost will be used with all features as inputs and fine-tuned.</p>
+<h2 id="Best-Results">Best Results<a class="anchor-link" href="#Best-Results">&#182;</a></h2><p>The <code>TF-IDF Trigrams</code> appeared to result in the best <code>macro-weighted F1-score</code> for the XGBoost model and the <code>CVEC Trigrams</code> for Logistic Regression. Class-weighted XGBoost also previously resulted in the best balanced predictions using sentiment and text features as input (<a href="features_benchmarking_eda.ipynb">features_benchmarking_eda.ipynb</a>). Therefore, these two models will be compared with all features as inputs.</p>
 
 </div>
 </div>
@@ -14534,7 +14534,7 @@ Wall time: 17min 46s
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="logistic"></a></p>
-<h2 id="Comparison-to-Logistic-Regression">Comparison to Logistic Regression<a class="anchor-link" href="#Comparison-to-Logistic-Regression">&#182;</a></h2><p>Just for comparison, to ensure no surprise improvements when all features are added together.</p>
+<h2 id="Logistic-Regression">Logistic Regression<a class="anchor-link" href="#Logistic-Regression">&#182;</a></h2><p>Despite higher <code>F1-Scores</code> with logistic regression, it's clear that XGBoost performed far better with regards to the minority <code>mixed</code> class. Since this is a cost-sensitive classification, where identifying the minority classes is particularly important, XGBoost is preferred.</p>
 
 </div>
 </div>
