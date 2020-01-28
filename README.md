@@ -12,8 +12,7 @@ The objective of this project was to research, design and help deploy natural la
 1) Automate responses to restaurant reviews online.
 2) Extract information to gain insights into products and topics being spoken about.
 
-# Project Overview
-
+------------------------------------------------
 Below is a list of notebooks in the directory and the components of the project included in each.
 
 _NOTE: Data for this notebook is not open source and is not included in this directory._
@@ -21,7 +20,7 @@ _NOTE: Data for this notebook is not open source and is not included in this dir
 # Part 1: Automation - NLP/ NLU
 
 ## Data Collection, Preparation & Preprocessing
-> [Data Preparation & Preprocessing](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/features_benchmarking_eda.html) (MySQL, Data Wrangling, Feature Engineering, Text Preprocessing)
+> [Data Preparation & Preprocessing](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/data_preparation_and_preprocessing.html) (MySQL, Data Wrangling, Feature Engineering, Text Preprocessing)
 <br>
 
 The data consisted of 140 related databases in MySQL Workbench (restored from an S3 bucket in AWS). All potentially relevant columns were queried and read into pandas dataframes. 
@@ -51,14 +50,12 @@ Text Preprocessing
 Text was preprocessed and saved for later use.
 
 <img src="https://github.com/DanyalAndriano/nlp_reviews_solutions/blob/master/graphics/pandas_preprocessed.png"> 
-
-## Feature Engineering, Selection & Exploration
-> [Unsupervised Sentiment & Text Features Exploration]() (Feature Engineering, Resampling Methods/ Class-Imbalance)
-> <br>
-> [N-gram Analysis]() (Tf-Idf, Bag-of-words, Feature Selection)
-> <br>
->[XGBoost Sentiment Analysis]() (Optimal Error Rate, Sklearn Pipelines, XGBoost, Fine-Tuning, Grid-search)
-><br>
+----------------------------------------
+## Feature Engineering & Sentiment Analysis
+<br>
+> [Unsupervised Sentiment & Text Features Exploration](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/features_benchmarking_eda.html) (Feature Engineering, Resampling Methods/ Class-Imbalance)
+>
+> [N-gram XGBoost Pipeline](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/sentiment-analysis-ML.html) (Tf-Idf, Bag-of-words, Feature Selection, Optimal Error Rate, Sklearn Pipelines, XGBoost, Fine-Tuning)
 
 Why bother with sentiment analysis when user ratings accompany review text? In general, user ratings were only moderately predictive of the sentiment labels and are therefore unreliable for inference. Furthermore, a 5 star review may still contain mixed sentiment - an automated system would need to be sensitive to this mixed sentiment so that the response, as well as insights into how customers _feel_ about a brand and their _opinions_ of the brand, is appropriate.  
 
