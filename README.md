@@ -36,10 +36,6 @@ Four tables were created:
 
 Labels
 ----------------
-Sentiment: `negative`, `positive` and `mixed` labels were created from existing negative and positive topic labels. If a review had both negative and positive topics, it was labeled _mixed_. 
-
-<img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/category_labels.png" width="800"> 
-
 Reviews were predominantly `positive`, with `mixed` and `negative` minority classes.
 
 ![Sentiment Labels](https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/sentiment_label_distribution.png) 
@@ -66,7 +62,7 @@ Sentiment & Text Features
 -------------------------------
 The `ratings`, `unsupervised sentiment scores` - from Amazon Comprehend, Textblob and VaderSentiment - as well as `text features` were combined as inputs to various models. Oversampling, undersampling and class-weights were all used to try and better balance the predictions.
 
-<img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/resampling_pipeline.png width="750">
+<img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/resampling_pipeline.png" width="750">
 
 The `Amazon Comprehend sentiment` scores contributed the most predictive value, followed by `Textblob`, and then `VaderSentiment` and `Text Features`.
 <img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/sentiment_feature_importance.png width="750">
@@ -79,7 +75,8 @@ NGRAMS
 XGBoost Pipeline
 -----------------------
 
-![XGBoost ROC Curve](https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/multiclass_ROC_xgboost.png) ![XGBoost CM](https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/xgboost_cm.png)
+<img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/multiclass_ROC_xgboost.png" width="500"> <img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/xgboost_cm.png" width="500">
+
 
 ## End-to-end Sentiment Classification with Bert
 >[Fast-BERT Sentiment Analysis]() (Fast-Bert Library, Transfer Learning in NLP, Error Analysis, Noisy Labels, Calibration)
