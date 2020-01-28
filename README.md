@@ -101,7 +101,7 @@ The fast-bert model performed better than XGBoost, and required less preprocessi
 # Deployment & Production
 >[Cost-Benefit Analysis](https://nbviewer.ipython.org/github/DanyalAndriano/nlp_project/blob/master/notebooks/cost_benefit_analysis.html) (Business Value and Risk, Decision Management)
 >
->[Fast-Bert](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/aws/fast-bert-sentiment_aws.html) (Production, API model deployment, Cloud Services)
+>[Fast-Bert](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/aws/fast-bert-sentiment_aws.html) (AWS SageMaker, Custom DL Frameworks, Production, API model deployment)
 ><br>
 >[XGBoost Inference Pipeline](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/aws/inference-pipeline-xgboost-sentiment.html) (Custom Preprocessing with Sklean in AWS, Inference Pipelines)
 
