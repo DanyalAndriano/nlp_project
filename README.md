@@ -66,6 +66,7 @@ The `ratings`, `unsupervised sentiment scores` - from Amazon Comprehend, Textblo
 <img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/resampling_pipeline.png" width="750">
 
 The `Amazon Comprehend sentiment` scores contributed the most predictive value, followed by `Textblob`, and then `VaderSentiment` and `Text Features`.
+
 <img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/sentiment_feature_importance.png width="750">
 
 NGRAMS
@@ -75,6 +76,7 @@ Features for language modeling/ text classification are often created by mapping
 `Logistic Regression` and `XGBoost` classifiers were be used to benchmark the tvec and cvec ngrams. 
 
 Logistic Regression and XGBoost classifiers will be used to benchmark the tvec and cvec ngrams.
+
 <img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/ngram_cvec.png width="650">
 
 XGBoost Pipeline
@@ -97,11 +99,11 @@ The fast-bert model performed better than XGBoost, and required less preprocessi
 <img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/bert_cm_uncorrected.png width="400">
 
 # Deployment & Production
->[Cost-Benefit Analysis](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/cost_benefit_analysis.html) (Business Value and Risk, Decision Management)
+>[Cost-Benefit Analysis](https://nbviewer.ipython.org/github/DanyalAndriano/nlp_project/blob/master/notebooks/cost_benefit_analysis.html) (Business Value and Risk, Decision Management)
+>
+>[Fast-Bert](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/aws/fast-bert-sentiment_aws.html) (Production, API model deployment, Cloud Services)
 ><br>
->[Fast-Bert](https://github.com/DanyalAndriano/nlp_project/blob/master/aws/fast-bert-sentiment_aws.ipynb) (Production, API model deployment, Cloud Services)
-><br>
->[XGBoost Inference Pipeline](https://github.com/DanyalAndriano/nlp_project/blob/master/aws/inference-pipeline-xgboost-sentiment.ipynb) (Custom Preprocessing with Sklean in AWS, Inference Pipelines)
+>[XGBoost Inference Pipeline](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/aws/inference-pipeline-xgboost-sentiment.html) (Custom Preprocessing with Sklean in AWS, Inference Pipelines)
 
 An initially high confidence cutoff was used (.95) to try and reduce misclassifications. This cutoff will still allow responses to be automated for 88% of the reviews. 
 
@@ -110,7 +112,7 @@ An initially high confidence cutoff was used (.95) to try and reduce misclassifi
 # Part 2: Insight - Location Based Sentiment Analysis
 ------------------------------------------------
 ## Data Mining & Visualization
->[Menu Analytics]() (Case Study, SpaCy NLP Pipelines, Entity Recognition, Data Viz (Time Series, Geospatial)
+>[Menu Analytics](https://nbviewer.ipython.org/github/DanyalAndriano/nlp_project/blob/master/notebooks/menu_analytics.html) (Case Study, SpaCy NLP Pipelines, Entity Recognition, Data Viz (Time Series, Geospatial)
 ><br>
 >[Unsupervised Topic Modeling](Will be added soon) (Text Mining, Text Summarization)
 
@@ -126,7 +128,6 @@ Menu Extraction
 <img src="https://github.com/DanyalAndriano/nlp_reviews_solutions/blob/master/graphics/Screenshot%20(27).png" width="1000">
 
 # Part 3: Next Steps
-------------------------------------------------
 
 > 1) Entity Recognition Models
 > 2) SpaCy Pipelines 
