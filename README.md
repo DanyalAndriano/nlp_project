@@ -98,6 +98,24 @@ The fast-bert model performed better than XGBoost, and required less preprocessi
 
 <img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/bert_cm_uncorrected.png width="400">
 
+Can we Trust the Uncertainty in the Predictions?
+-------------------------------------------------
+Probabilistic classifiers output a probability distribution over target classes, rather than just a prediction. The value of this distribution is that it represents the amount of uncertainty in those predictions. However, the probabilities outputted do not always accurately represent the amount of uncertainty - sometimes probabilities are over- or under-confident.
+
+**["Calibration - the idea that a model's predicted probabilities of outcomes reflect true probabilities of those outcomes - formalizes this notion"](https://arxiv.org/abs/1904.01685)** 
+
+>**NOTE:** Custom methods were created for this multiclass calibration. See: `calibration_methods.py` and `calibration_functions.py`.
+Methods from the [Netcal](https://fabiankueppers.github.io/calibration-framework/build/html/index.html) and [Calibration](https://github.com/markus93/NN_calibration) libraries were used directly or adapted. Certain methods from this repo were also adapted [NN Calibration](https://github.com/markus93/NN_calibration). 
+
+While overall the model was well calibrated, classwise-reliability diagrams showed that the `positive` and `mixed` classes are miscalibrated. Isotronic Regression helped to correct this miscalibration. 
+
+<img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/uncalibrated_classwise.png"> <img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/iso_calibration.png">
+
+Calibration methods were further evaluated with calibration error metrics (ECE, classwise-ECE, Adaptive ECE), and proper loss metrics (Brier and Negative Log-Likelihood). `Isotronic Regression` and `Dirichlet scaling` appeared to best correct miscalibration. 
+
+<img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/calibration_evaluation_metrics.png">
+  
+  
 # Deployment & Production
 >[Cost-Benefit Analysis](https://nbviewer.ipython.org/github/DanyalAndriano/nlp_project/blob/master/notebooks/cost_benefit_analysis.html) (Business Value and Risk, Decision Management)
 >
