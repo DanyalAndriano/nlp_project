@@ -94,7 +94,6 @@ def one_v_all_arr(arr):
     c3_v_all = np.hstack([(c1 + c2), c3])
     return c1_v_all, c2_v_all, c3_v_all
 
-# CALIBRATION FUNCTIONS
 def brier_multi(targets=None, probs=None, num_classes=3):
     onehot_targets = one_hot(targets, num_classes)
     return np.mean(np.sum((probs - onehot_targets)**2, axis=1))
