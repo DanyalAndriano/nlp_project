@@ -13148,7 +13148,7 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load libraries and configure notebook settings</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">from</span> <span class="nn">libraries_bert</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">libraries_bert</span> <span class="k">import</span> <span class="o">*</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 
 <span class="n">run_start_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">_%H-%M-%S&#39;</span><span class="p">)</span>
@@ -16160,7 +16160,16 @@ I1006 19:08:50.161856  7500 modeling_utils.py:205] Model weights saved in C:\Use
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="error"></a></p>
-<h1 id="Error-Analysis">Error Analysis<a class="anchor-link" href="#Error-Analysis">&#182;</a></h1><p><a href="#index">Return to Index</a></p>
+<h1 id="Error-Analysis">Error Analysis<a class="anchor-link" href="#Error-Analysis">&#182;</a></h1><p>The <code>eyeball validation set</code> consists of 500 samples. It is a subset of the validation set that is intended for manual inspection, to aid with:</p>
+<blockquote><ol>
+<li>Determining human-level performance, i.e. the optimal error rate to aim for/ unavoidable underfitting (bias).
+<br></li>
+<li>Estimating noisy (incorrect) labels.
+<br></li>
+<li>Intuition for classifier performance and errors (understand where/ how improvements can be made).</li>
+</ol>
+</blockquote>
+<p><a href="#index">Return to Index</a></p>
 <p><a id="eye"></a></p>
 <h2 id="Performance-on-the-Eyeball-Validation-Set">Performance on the Eyeball Validation Set<a class="anchor-link" href="#Performance-on-the-Eyeball-Validation-Set">&#182;</a></h2>
 </div>
@@ -16518,7 +16527,7 @@ Two of the confident errors were ambiguous by human standards (i.e., the human j
 
 </code></pre>
 <p>Therefore, 2/4 (50%) of the confident errors were unambiguous (unavoidable) and can be classed as true and costly (undetectable) error. This is estimated at .4% of the entire dataset.</p>
-<h2 id="Avoidable-Bias-(underfitting):">Avoidable Bias (underfitting):<a class="anchor-link" href="#Avoidable-Bias-(underfitting):">&#182;</a></h2><p>Human error on this dataset is approximately 0.5-1%. The classifier is therefore underfitting by 2.5% (although only .4% confidentally). Considering that there are ~6% noisy labels, this underfitting may be unavoidable unless the labels are corrected. It is likely that training for more epochs will not fix the current error and may even result in the classifier overfitting to the noisy labels.</p>
+<h2 id="Avoidable-Bias-(underfitting):">Avoidable Bias (underfitting):<a class="anchor-link" href="#Avoidable-Bias-(underfitting):">&#182;</a></h2><p>Human error on this dataset is approximately 0.5-1%. The classifier is therefore underfitting by 2.5% (although only <strong>.4%</strong> confidentally). Considering that there are ~6% noisy labels, this underfitting may be unavoidable unless the labels are corrected. It is likely that training for more epochs will not fix the current error and may even result in the classifier overfitting to the noisy labels.</p>
 
 </div>
 </div>
@@ -17203,7 +17212,7 @@ Name: label, dtype: float64</pre>
 <div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Confirm logit predictions are the same as those using probabilities</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get logits for calibration</span>
 <span class="n">val_logits</span><span class="p">,</span> <span class="n">val_logit_preds</span> <span class="o">=</span> <span class="n">bert_predictions</span><span class="p">(</span><span class="n">val_corrected</span><span class="p">,</span> <span class="n">multiclass_predictor</span><span class="p">,</span> 
                                                <span class="n">logits</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">view_cm</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
@@ -17366,7 +17375,7 @@ Methods from the <a href="https://fabiankueppers.github.io/calibration-framework
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">calibration_methods</span>
-<span class="kn">from</span> <span class="nn">calibration_methods</span> <span class="kn">import</span> <span class="n">TemperatureScaling</span><span class="p">,</span> <span class="n">DirichletScaling</span><span class="p">,</span> <span class="n">Uncalibrated</span><span class="p">,</span> <span class="n">Isotronic</span>
+<span class="kn">from</span> <span class="nn">calibration_methods</span> <span class="k">import</span> <span class="n">TemperatureScaling</span><span class="p">,</span> <span class="n">DirichletScaling</span><span class="p">,</span> <span class="n">Uncalibrated</span><span class="p">,</span> <span class="n">Isotronic</span>
 
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">val_probs_corrected</span><span class="p">)</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">9</span><span class="p">));</span>
 </pre></div>
@@ -17499,7 +17508,7 @@ Methods from the <a href="https://fabiankueppers.github.io/calibration-framework
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p><a id="eval"></a></p>
-<h1 id="Evaluation-Metrics">Evaluation Metrics<a class="anchor-link" href="#Evaluation-Metrics">&#182;</a></h1><p><a href="https://amstat.tandfonline.com/doi/abs/10.1198/016214506000001437#.Xi-TkGg3nmE">Strictly proper scoring rules</a>, as well as multiple <a href="https://arxiv.org/abs/1904.01685">calibration error metrics</a> were used to evaluate calibration (in addition to the reliability diagrams and histograms).</p>
+<h1 id="Evaluation-Metrics">Evaluation Metrics<a class="anchor-link" href="#Evaluation-Metrics">&#182;</a></h1><p><a href="https://en.wikipedia.org/wiki/Scoring_rule">Strictly proper scoring rules</a>, as well as multiple <a href="https://arxiv.org/abs/1904.01685">calibration error metrics</a> were used to evaluate calibration (in addition to the reliability diagrams and histograms).</p>
 <p><code>CALIBRATION ERROR:</code>
 <br>
 <strong>Expected Calibration Error:</strong> Discretize the probability interval into a fixed number of bins and assign predicted probabilities to each bin. The calibration error is the difference between the number of correct probabilities (accuracy) and the mean of all probabilities (confidence) for each bin.</p>
@@ -17515,7 +17524,7 @@ Methods from the <a href="https://fabiankueppers.github.io/calibration-framework
 <p><code>RELIABILITY DIAGRAMS:</code>
 <br>
 When average confidence closely matches accuracy, <a href="https://arxiv.org/abs/1706.04599">the classifier is well calibrated</a>. This can be seen in the reliability diagrams below. In the histrogram it is the distance between the grey and black lines, and for the binned confidence any deviation from the perfect diagonal represents miscalibration (visually represents ECE).</p>
-<p>A combination of proper scoring and calibration error metrics give a well rounded view on miscalibration and improvements made.</p>
+<p>A combination of reliability diagrams, proper scoring and calibration error metrics give a well rounded view on miscalibration and improvements made.</p>
 
 </div>
 </div>
