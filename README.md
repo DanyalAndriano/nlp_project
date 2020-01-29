@@ -132,6 +132,6 @@ Menu Extraction
 > 1) Redflags Classifier (detect insults, disrimination, injury, illness, theft) 
 > 2) Entity Recognition Model + Categorization (menu items -> food subcategories)
 > 3) SpaCy Pipelines 
->     - build comprehensive pipelines in AWS to combine classification, entity-recognition, and rule-based filtering, and fuzzy matching into a single process. 
+>     - build comprehensive pipelines in AWS to combine classification, entity-recognition, rule-based filtering, and fuzzy matching into a single process. 
 > 4) Full Response Automation
 
