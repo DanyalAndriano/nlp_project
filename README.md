@@ -109,7 +109,7 @@ Methods from the [Netcal](https://fabiankueppers.github.io/calibration-framework
 
 While overall the model was well calibrated, classwise-reliability diagrams showed that the `positive` and `mixed` classes are miscalibrated. Isotronic Regression helped to correct this miscalibration. 
 
-<img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/uncalibrated_classwise.png"> <img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/iso_calibration.png">
+<img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/uncalibrated_classwise.png" width="400"> <img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/iso_calibration.png" width="400">
 
 Calibration methods were further evaluated with calibration error metrics (ECE, classwise-ECE, Adaptive ECE), and proper loss metrics (Brier and Negative Log-Likelihood). `Isotronic Regression` and `Dirichlet scaling` appeared to best correct miscalibration. 
 
