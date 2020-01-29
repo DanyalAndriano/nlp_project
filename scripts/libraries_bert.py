@@ -51,6 +51,14 @@ from fast_bert.learner_lm import BertLMLearner
 from fast_bert.metrics import fbeta, F1, accuracy_multilabel, accuracy_thresh, accuracy
 from fast_bert.prediction import BertClassificationPredictor
 
+# geospatial libraries
+import geopandas as gpd
+import geopandas.tools
+import plotly.express as px
+import plotly.graph_objects as go
+from pygeocoder import Geocoder
+from shapely.geometry import Point, Polygon
+
 # metrics
 from sklearn import metrics
 from sklearn.metrics import confusion_matrix, roc_curve, auc, accuracy_score, \
