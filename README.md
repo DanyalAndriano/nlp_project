@@ -129,8 +129,9 @@ Menu Extraction
 
 # Part 3: In progress...
 
-> 1) Entity Recognition Models
-> 2) SpaCy Pipelines 
->     - build comprehensive pipelines in AWS to combine classification and entity-recognition models into a single process. 
-> 3) Full Response Automation
+> 1) Redflags Classifier (detect insults, disrimination, injury, illness, theft) 
+> 2) Entity Recognition Model + Categorization (menu items -> food subcategories)
+> 3) SpaCy Pipelines 
+>     - build comprehensive pipelines in AWS to combine classification, entity-recognition, and rule-based filtering, and fuzzy matching into a single process. 
+> 4) Full Response Automation
 
