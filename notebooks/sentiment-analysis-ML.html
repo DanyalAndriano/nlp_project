@@ -15192,7 +15192,8 @@ Normalized confusion matrix
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="s1">&#39;aws_neg&#39;</span><span class="p">,</span> <span class="s1">&#39;aws_pos&#39;</span><span class="p">,</span> <span class="s1">&#39;aws_mix&#39;</span><span class="p">,</span> <span class="s1">&#39;char_count&#39;</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># combine mean word vector with other text and sentiment features</span>
+<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="s1">&#39;aws_neg&#39;</span><span class="p">,</span> <span class="s1">&#39;aws_pos&#39;</span><span class="p">,</span> <span class="s1">&#39;aws_mix&#39;</span><span class="p">,</span> <span class="s1">&#39;char_count&#39;</span><span class="p">,</span>
             <span class="s1">&#39;vadar_pos&#39;</span><span class="p">,</span> <span class="s1">&#39;vadar_neg&#39;</span><span class="p">,</span> <span class="s1">&#39;vadar_neu&#39;</span><span class="p">,</span> <span class="s1">&#39;tb_sentiment&#39;</span><span class="p">]</span>
 
 <span class="n">train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">train_vec</span><span class="p">,</span> <span class="n">X_train</span><span class="p">[</span><span class="n">features</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()])</span>
@@ -15330,7 +15331,7 @@ Wall time: 2min 48s
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="next"></a></p>
-<h2 id="Next-Steps...">Next Steps...<a class="anchor-link" href="#Next-Steps...">&#182;</a></h2><p>The end-to-end bert learning model outperforms the current xgboost models (and simplifies the overall pipeline by taking raw text and excluding the need for feature engineering and text preprocessing). If that solution hadn't worked, or been viable for some reason, the next steps would have been to combined word vectors as multiple inputs to an LSTM neural network, or even possibly a CNN. Perhaps even combined inputs with xgboost.</p>
+<h2 id="Next-Steps...">Next Steps...<a class="anchor-link" href="#Next-Steps...">&#182;</a></h2><p>The end-to-end bert learning model outperforms the current xgboost models (and simplifies the overall pipeline by taking raw text and excluding the need for feature engineering and text preprocessing). If that solution hadn't worked or been viable, for some reason, the next steps would have been to combine word vectors as multiple inputs to an LSTM neural network, or even possibly a CNN. Perhaps even combined inputs with xgboost.</p>
 
 </div>
 </div>
