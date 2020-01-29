@@ -61,7 +61,7 @@ Why bother with sentiment analysis when user ratings accompany review text? In g
 
 Sentiment & Text Features
 -------------------------------
-The `ratings`, `unsupervised sentiment scores` - from Amazon Comprehend, Textblob and VaderSentiment - as well as `text features` were combined as inputs to various models. Oversampling, undersampling and class-weights were all used to try and better balance the predictions.
+The `ratings`, `unsupervised sentiment scores` - from Amazon Comprehend, Textblob and VaderSentiment - as well as `text features` were combined as inputs to various models. A pipeline was used to test numerous models and resampling techniques (oversampling, undersampling and class-weights) to find the best performing model. Prediction of the minority class is particularly important, as this is a cost-sensitive classification problem (i.e., misclassifying mixed sentiment is costly and carries business risks).
 
 <img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/resampling_pipeline.png" width="750">
 
@@ -69,7 +69,7 @@ The `Amazon Comprehend sentiment` scores contributed the most predictive value, 
 
 <img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/sentiment_feature_importance.png width="750">
 
-NGRAMS
+Ngrams
 -----------------
 Features for language modeling/ text classification are often created by mapping words or phrases to vectors of real numbers. The values of the vectors depend on the method used to weight the word/phrase. Three different methods are used for predicting sentiment: '`TF-IDF` (tvec), `count vectorization` (cvec) and `word embeddings`.   
 
