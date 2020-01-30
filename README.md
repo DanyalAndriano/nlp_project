@@ -75,8 +75,6 @@ Features for language modeling/ text classification are often created by mapping
 
 `Logistic Regression` and `XGBoost` classifiers were be used to benchmark the tvec and cvec ngrams. 
 
-Logistic Regression and XGBoost classifiers will be used to benchmark the tvec and cvec ngrams.
-
 <img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/ngram_cvec.png width="650">
 
 XGBoost Pipeline
