@@ -94,7 +94,7 @@ Performance
 -------------------------
 The fast-bert model performed better than XGBoost, and required less preprocessing. The fast-bert framework was added to the AWS ecosystem and the classifier was made available as an endpoint. 
 
-<img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/multiclass_ROC_bert.png" width="500"> <img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/bert_cm_uncorrected.png width="400">
+<img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/multiclass_ROC_bert.png" width="500"> <img src=https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/bert_cm_uncorrected.png width="350">
 
 Can we Trust the Uncertainty in the Predictions?
 -------------------------------------------------
