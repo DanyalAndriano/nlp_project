@@ -20,7 +20,7 @@ _NOTE: Data for this notebook is not open source and is not included in this dir
 ------------------------------------------------
 
 # Data Collection, Preparation & Preprocessing
-> [Data Preparation & Preprocessing](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/data_preparation_and_preprocessing.html) (MySQL, Data Wrangling, Feature Engineering, Text Preprocessing)
+> [Data Preparation & Preprocessing](https://nbviewer.ipython.org/github/DanyalAndriano/nlp_project/blob/master/notebooks/data_preparation_and_preprocessing.html) (MySQL, Data Wrangling, Feature Engineering, Text Preprocessing)
 <br>
 
 The data consisted of 140 related databases in MySQL Workbench (restored from an S3 bucket in AWS). All potentially relevant columns were queried and read into pandas dataframes. 
@@ -51,9 +51,9 @@ Text was preprocessed and saved for later use.
 
 # Feature Engineering & Sentiment Analysis
 
-> [Unsupervised Sentiment & Text Features Exploration](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/features_benchmarking_eda.html) (Feature Engineering, Resampling Methods/ Class-Imbalance)
+> [Unsupervised Sentiment & Text Features Exploration](https://nbviewer.ipython.org/github/DanyalAndriano/nlp_project/blob/master/notebooks/features_benchmarking_eda.html) (Feature Engineering, Resampling Methods/ Class-Imbalance)
 >
-> [N-gram XGBoost Pipeline](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/sentiment-analysis-ML.html) (Tf-Idf, Bag-of-words, Feature Selection, Optimal Error Rate, Sklearn Pipelines, XGBoost, Fine-Tuning)
+> [N-gram XGBoost Pipeline](https://nbviewer.ipython.org/github/DanyalAndriano/nlp_project/blob/master/notebooks/sentiment-analysis-ML.html) (Tf-Idf, Bag-of-words, Feature Selection, Optimal Error Rate, Sklearn Pipelines, XGBoost, Fine-Tuning)
 
 Why bother with sentiment analysis when user ratings accompany review text? In general, user ratings were only moderately predictive of the sentiment labels and are therefore unreliable for inference. Furthermore, a 5 star review may still contain mixed sentiment - an automated system would need to be sensitive to this mixed sentiment so that the response, as well as insights into how customers _feel_ about a brand and their _opinions_ of the brand, is appropriate.  
 
@@ -84,7 +84,7 @@ The `TF-IDF Trigrams` resulted in the best `macro-weighted F1-score` for the XGB
 <img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/multiclass_ROC_xgboost.png" width="500"> <img src="https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/xgboost_cm.png" width="350">
 
 # End-to-end Sentiment Classification with Bert
->[Fast-BERT Sentiment Analysis](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/notebooks/bert_sentiment_classification.html) (Fast-Bert Library, Transfer Learning in NLP, Error Analysis, Noisy Labels, Calibration)
+>[Fast-BERT Sentiment Analysis](https://nbviewer.ipython.org/github/DanyalAndriano/nlp_project/blob/master/notebooks/bert_sentiment_classification.html) (Fast-Bert Library, Transfer Learning in NLP, Error Analysis, Noisy Labels, Calibration)
 
 The fast-bert library was used to fine-tune pytorch transfomer's bert language model. Fast-bert is a Fast-AI inspired high level wrapper for the transformer architectures that works particularly well for fine-tuning these models to downstream classification tasks. The pytorch transformer models are smaller and faster than the original bert architecture, making them especially good for production. 
 
@@ -117,9 +117,9 @@ Calibration methods were further evaluated with calibration error metrics (ECE, 
 # Deployment & Production
 >[Cost-Benefit Analysis](https://nbviewer.ipython.org/github/DanyalAndriano/nlp_project/blob/master/notebooks/cost_benefit_analysis.html) (Business Value and Risk, Decision Management)
 >
->[Fast-Bert](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/aws/fast-bert-sentiment_aws.html) (AWS SageMaker, Custom DL Frameworks, Production, API model deployment)
+>[Fast-Bert](https://nbviewer.ipython.org/github/DanyalAndriano/nlp_project/blob/master/aws/fast-bert-sentiment_aws.html) (AWS SageMaker, Custom DL Frameworks, Production, API model deployment)
 ><br>
->[XGBoost Inference Pipeline](http://htmlpreview.github.io/?https://github.com/DanyalAndriano/nlp_project/blob/master/aws/inference-pipeline-xgboost-sentiment.html) (Custom Preprocessing with Sklean in AWS, Inference Pipelines)
+>[XGBoost Inference Pipeline](https://nbviewer.ipython.org/github/DanyalAndriano/nlp_project/blob/master/aws/inference-pipeline-xgboost-sentiment.html) (Custom Preprocessing with Sklean in AWS, Inference Pipelines)
 
 An initially high confidence cutoff was used (.95) to try and reduce misclassifications. This cutoff will still allow responses to be automated for 88% of the reviews. 
 
