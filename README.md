@@ -14,7 +14,7 @@ The objective of this project was to research, design and help deploy natural la
 
 Below is a list of notebooks in the directory and the components of the project included in each. Use the links to render in html (recommended to view hyperlinks and graphics). 
 
-_NOTE: Data for this notebook is not open source and is not included in this directory._
+_NOTE: Data for this project is not open source and is not included in this directory._
 
 # Part 1: Automation - NLP/ NLU
 ------------------------------------------------
