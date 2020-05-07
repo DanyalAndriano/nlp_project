@@ -55,7 +55,7 @@ Text was preprocessed and saved for later use.
 >
 > [N-gram XGBoost Pipeline](https://nbviewer.ipython.org/github/DanyalAndriano/nlp_project/blob/master/notebooks/sentiment-analysis-ML.html) (Tf-Idf, Bag-of-words, Feature Selection, Optimal Error Rate, Sklearn Pipelines, XGBoost, Fine-Tuning)
 
-Why bother with sentiment analysis when user ratings accompany review text? In general, user ratings were only moderately predictive of the sentiment labels and are therefore unreliable for inference. Furthermore, a 5 star review may still contain mixed sentiment - an automated system would need to be sensitive to this mixed sentiment so that the response, as well as insights into how customers _feel_ about a brand and their _opinions_ of the brand, is appropriate.  
+Why bother with sentiment analysis when user ratings accompany review text? In general, user ratings were only moderately predictive of the sentiment labels and are therefore unreliable for predicting sentiment. Furthermore, a 5 star review may still contain mixed sentiment - an automated system would need to be sensitive to this mixed sentiment so that the response, as well as insights into how customers _feel_ about a brand and their _opinions_ of the brand, is appropriate.  
 
 ![ratings](https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/user_ratings_freq.png) ![ratings predictions](https://github.com/DanyalAndriano/nlp_project/blob/master/graphics/ratings_preds.png)
 
